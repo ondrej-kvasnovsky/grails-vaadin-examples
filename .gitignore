@@ -1,0 +1,13 @@
+.metadata
+.settings/
+target/
+build/
+target-eclipse/
+stacktrace.log
+web-app/WEB-INF/classes
+*.zip
+*.class
+*.war
+*.zip
+*.log
+*.jar
