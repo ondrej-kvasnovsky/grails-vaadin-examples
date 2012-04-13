@@ -11,3 +11,4 @@ web-app/WEB-INF/classes
 *.zip
 *.log
 *.jar
+application.properties
