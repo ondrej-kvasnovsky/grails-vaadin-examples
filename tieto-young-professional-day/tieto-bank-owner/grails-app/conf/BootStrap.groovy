@@ -1,12 +1,13 @@
-import tieto.bank.admin.Account
-import tieto.bank.admin.AccountType
-import tieto.bank.admin.User
+import grails.util.*;
 
 class BootStrap {
 
-    def init = { servletContext ->
-        new DevData().insert()
-    }
-    def destroy = {
-    }
+	def init = { servletContext ->
+		Environment current = Environment.getCurrent()
+		if(Environment.DEVELOPMENT.equals(current)) {
+			new DevData().insert()
+		}
+	}
+	def destroy = {
+	}
 }
