@@ -1,0 +1,323 @@
+/* GLOBALS */
+
+html {
+	background-color: #ddd;
+	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
+	background-image: linear-gradient(top, #aaa, #ddd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
+	background-repeat: no-repeat;
+	height: 100%;
+	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+html.no-cssgradients {
+	background-color: #aaa;
+}
+body {
+    font-size:100%;
+    line-height:1.125em;
+}
+h1 {
+	color: #48802c;
+	font-weight: normal;
+	font-size: 1.25em;
+	margin: 0.8em 0 0.3em 0;
+}
+.v-generated-body, .v-app, .v-app .v-view,
+.v-window, .v-app input, .v-app textarea,
+input.v-textfield, input.v-textfield[type="text"], textarea.v-textarea {
+	font-size: 1em;
+    line-height:1.125em;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+}
+.v-button, .v-button .v-button-wrap, .v-button-caption, .v-button-wrap,
+.v-disabled.v-button-link .v-button-wrap,
+.v-button-link:active .v-button-wrap,
+.v-disabled.v-button-pressedv-button-link .v-button-wrap {
+	font-size: 1em;
+	line-height: 1.2em;
+}
+.v-button-link .v-button-caption,
+.v-native-button-link .v-native-button-caption {
+	color: #48802c;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+.v-button-link {
+	text-decoration: none;
+}
+.v-app .v-button:focus .v-button-wrap,
+.v-app .v-button.v-pressed .v-button-wrap {
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;	
+}
+li > div {
+	display: inline;
+}
+
+/* PAGE LAYOUT */
+
+.v-generated-body, .v-app, .v-app .v-view {
+	background: transparent;
+}
+.body {
+	background-color: white;
+	color: #333333;
+	margin: 0 auto 5px auto;
+	max-width: 960px;
+	   -moz-box-shadow: 0 0 0.3em #255b17;
+	-webkit-box-shadow: 0 0 0.3em #255b17;
+	        box-shadow: 0 0 0.3em #255b17;
+}
+.v-app #grailsLogo {
+	background-color: #abbf78;
+}
+.v-app #grailsLogo a {
+	display: inline-block;
+	margin: 1em;
+}
+.footer {
+	background: #abbf78;
+	color: #000;
+	clear: both;
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	padding: 1em;
+	min-height: 1em;
+}
+.footer a {
+	color: #255b17;
+}
+
+/* HEADINGS */
+
+.content h1 {
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0.8em 1em 0.3em;
+	padding: 0 0.25em;
+}
+.scaffold-list h1 {
+	border: none;
+}
+
+/* TOOLBARS */
+
+.toolbar {
+	padding: 0.3em 0.75em;
+	margin: 1px 0 0.2em;
+}
+.toolbar .v-button {
+	background-image: none;
+	padding: auto;
+	height: auto;
+}
+.toolbar .v-button-caption {
+	padding-left: 8px;
+	font-weight: normal;
+	color: #666666;
+	text-shadow: none
+}
+.toolbar .v-button .v-button-wrap {
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+	border: none;
+	background: none;
+	box-shadow: none;
+	color: #666666;
+	height: auto;
+	padding: 0.25em 0.7em;
+}
+.toolbar .v-button:hover .v-button-wrap {
+	background-color: #999999;
+	outline: none;
+}
+.toolbar .v-button:hover .v-button-caption{
+	color: #ffffff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* NAVIGATION */
+
+.navigation {
+	background-color: #efefef;
+	padding: 0.35em 0.75em;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	zoom: 1;
+}
+.navigation .v-button-caption {
+	line-height: 1.4em;
+}
+
+/* BUTTONS */
+
+.buttons {
+	background-color: #efefef;
+	overflow: hidden;
+	padding: 0.3em;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	margin: 0.2em 0 0.2em 0;
+	border: none;
+}
+.buttons .v-button-caption {
+	line-height: 1.3em;
+}
+
+/* TABLES */
+.v-app .v-table {
+	   -moz-box-shadow: 0 3px 2px 1px #eeeeee;
+	-webkit-box-shadow: 0 3px 2px 1px #eeeeee;
+	        box-shadow: 0 3px 2px 1px #eeeeee;
+	margin-bottom: 3px;
+}
+.v-table-cell-content {
+	padding: 0.3em 0 0.3em 1em;
+	line-height: 1.1em;
+	font-size: 1em;
+}
+.v-table-caption-container {
+	padding: 0.6em 0 0 0.5em;
+	font-weight: bold;
+	color: #666666;
+}
+.v-table-cell-content .v-textfield {
+	width: 90%;
+	margin: 0;
+}
+.v-table-cell-wrapper {
+	padding: 0;
+	margin: 0.3em 0;
+}
+.v-table-header-wrap {
+	background-color: #efefef;
+	background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
+}
+.v-table-header-cell:hover, .v-table-header-cell-asc:hover, .v-table-header-cell-desc:hover {
+	background: #E1F2B6;
+}
+
+/* POPUPS */
+
+.v-Notification-error p, .v-Notification-error h1 {
+	font-size: 0.8em;
+	line-height: 2;
+	color: white;
+}
+.v-Notification-warning {
+	font-size: 0.8em;
+	line-height: 2;
+	border: none;
+	color: white;
+	   -moz-box-shadow: 0 0 0.25em #006dba;
+	-webkit-box-shadow: 0 0 0.25em #006dba;
+	        box-shadow: 0 0 0.25em #006dba;
+	background: #b2d1ff url(../images/skin/information.png) 1em 50% no-repeat;
+	text-indent: 1em;
+}
+.v-Notification-warning h1 {
+	color: #006dba;
+}
+.confirm-popup {
+	width: 300px;
+}
+.confirm-popup .v-window-header {
+	color: #48802c;
+	font-weight: normal;
+	font-size: 1.25em;
+}
+.confirm-popup .v-verticallayout-spacing-on {
+	padding-top: 1.5em;
+}
+
+/* FORM */
+.v-form {
+	margin: 0.6em 1.25em 0;
+	padding: 0.3em 1.8em 1.25em;
+}
+.v-formlayout-captioncell {
+	color: #666666;
+	width: 25%;
+}
+.v-formlayout-spacing .v-formlayout-row .v-formlayout-captioncell, 
+.v-formlayout-spacing .v-formlayout-row .v-formlayout-contentcell,
+.v-formlayout-spacing .v-formlayout-row .v-formlayout-errorcell {
+	padding-top: 1em;
+}
+.v-formlayout-margin-top .v-formlayout-firstrow .v-formlayout-captioncell, 
+.v-formlayout-margin-top .v-formlayout-firstrow .v-formlayout-contentcell,
+.v-formlayout-margin-top .v-formlayout-firstrow .v-formlayout-errorcell {
+	padding-top:0;
+}
+.v-formlayout-margin-bottom .v-formlayout-lastrow .v-formlayout-captioncell,
+.v-formlayout-margin-bottom .v-formlayout-lastrow .v-formlayout-contentcell,
+.v-formlayout-margin-bottom .v-formlayout-lastrow .v-formlayout-errorcell {
+	padding-bottom:0;
+}
+
+/* FIELDS */
+
+.v-app input, .v-app textarea,
+.v-textfield, .v-textfield[type="text"], .v-textarea {
+	background-color: #fcfcfc;
+	background-image: none;
+	border: 1px solid #cccccc;
+}
+input.v-textfield, input.v-textfield[type="text"], textarea.v-textarea {
+	height: auto;
+	padding: 0.2em 0.4em;
+	width: 50%;
+}
+.v-app input:focus, .v-app select:focus, .v-app textarea:focus {
+	background-color: #ffffff;
+	border: 1px solid #eeeeee;
+	outline: 0;
+	   -moz-box-shadow: 0 0 0.5em #ffffff;
+	-webkit-box-shadow: 0 0 0.5em #ffffff;
+	        box-shadow: 0 0 0.5em #ffffff;
+}
+.v-app .v-textfield.v-readonly, .v-app .v-textarea.v-readonly {
+	border: none;	
+}
+.v-required-field-indicator {
+	color: #48802C;
+	display: inline-block;
+	font-weight: bold;
+	margin-left: 0.3em;
+	position: relative;
+	top: 0.1em;
+}
+.v-app .v-textfield-error, .v-select-error, .v-textarea-error {
+	background: #fff3f3;
+	border-color: #ffaaaa;
+	color: #cc0000;
+}
+.v-textfield-error:focus, .v-select-error:focus, .v-textarea-error:focus {
+	   -moz-box-shadow: 0 0 0.5em #ffaaaa;
+	-webkit-box-shadow: 0 0 0.5em #ffaaaa;
+	        box-shadow: 0 0 0.5em #ffaaaa;
+}
+
+/* MISC */
+
+.bullet {
+	width: 0.5em;
+	line-height: 1.2em;
+}
+a.skip {
+	position: absolute;
+	left: -9999px;
+}
