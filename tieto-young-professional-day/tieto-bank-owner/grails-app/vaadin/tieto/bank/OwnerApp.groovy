@@ -13,7 +13,7 @@ class OwnerApp extends Application {
 	
 	Table tableAccounts = new Table()
 	
-	AccountDetailForm accDetail = new AccountDetailForm()
+	AccountDetailForm form = new AccountDetailForm()
     
     @Override
     public void init() {
@@ -21,6 +21,8 @@ class OwnerApp extends Application {
         
         Window w = new Window()
 		w.setContent(new HorizontalLayout())
+		w.getContent().setMargin(true)
+		w.getContent().setSpacing(true)
 
         Integer bankBalance = Account.list().balance.sum()
         Label lblBankBalance = new Label("Bank balance: " + bankBalance)
@@ -47,10 +49,12 @@ class OwnerApp extends Application {
                 w.addComponent(table)
 		
 		tableAccounts.setSelectable(true)
+		tableAccounts.setImmediate(true)
 		tableAccounts.addListener(new ShowAccountDetailListener(app:this))
 		w.addComponent(tableAccounts)
 		
-		w.addComponent(accDetail)
+		w.addComponent(form)
+		form.setVisible(false)
         
         setMainWindow(w)
     }
