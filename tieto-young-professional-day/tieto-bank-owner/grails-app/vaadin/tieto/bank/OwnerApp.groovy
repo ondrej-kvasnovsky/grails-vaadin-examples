@@ -4,20 +4,23 @@ import tieto.bank.admin.Account
 import tieto.bank.admin.User
 
 import com.vaadin.Application
-import com.vaadin.ui.Label
-import com.vaadin.ui.Table
-import com.vaadin.ui.Window
+import com.vaadin.ui.*;
 import com.vaadin.ui.themes.Runo;
 
 class OwnerApp extends Application {
 
     Label lblUserBalance = new Label()
+	
+	Table tableAccounts = new Table()
+	
+	AccountDetailForm accDetail = new AccountDetailForm()
     
     @Override
     public void init() {
         setTheme(Runo.themeName())
         
         Window w = new Window()
+		w.setContent(new HorizontalLayout())
 
         Integer bankBalance = Account.list().balance.sum()
         Label lblBankBalance = new Label("Bank balance: " + bankBalance)
@@ -41,8 +44,13 @@ class OwnerApp extends Application {
         }
         
         table.addListener(new ShowBalanceListener(app:this))
-        
-        w.addComponent(table)
+                w.addComponent(table)
+		
+		tableAccounts.setSelectable(true)
+		tableAccounts.addListener(new ShowAccountDetailListener(app:this))
+		w.addComponent(tableAccounts)
+		
+		w.addComponent(accDetail)
         
         setMainWindow(w)
     }
